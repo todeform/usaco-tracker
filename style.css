@@ -136,7 +136,7 @@ body {
     cursor: pointer;
 }
 
-.table-row .incomplete { outline: 1.5px dashed #e7e7e9; }
+.table-row .incomplete { outline: 2px dashed #e7e7e9; }
 
 .independent { background: #39E58C; }
 .hints       { background: #FF922E; }
