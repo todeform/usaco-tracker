@@ -8,9 +8,18 @@ function addRow() {
         <div class="status independent incomplete" style="top: 20px; left: 20px; width: 20px; height: 20px;"></div>
 
         <div class="status-menu" hidden>
-            <button class="menu-button" data-color="independent">🟢 Independent</button>
-            <button class="menu-button" data-color="hints">🟠 Hints</button>
-            <button class="menu-button" data-color="solution">🔴 Solution</button>
+            <button class="menu-button" data-color="independent">
+                <span class="menu-circle independent"></span>
+                Independent
+            </button>
+            <button class="menu-button" data-color="hints" style="top: 30px;">
+                <span class="menu-circle hints"></span>
+                Hints
+            </button>
+            <button class="menu-button" data-color="solution" style="top: 60px;">
+                <span class="menu-circle solution"></span>
+                Solution
+            </button>
             <div class="checkbox unchecked">
                 <img width=14 height=14 src="images/checkmark.png">
             </div>
