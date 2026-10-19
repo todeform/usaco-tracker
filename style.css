@@ -50,10 +50,6 @@ body {
     border-bottom: 2px solid var(--border);
 }
 
-.table-row.expanded {
-    height: 98px;
-}
-
 .table-row input,
 .table-row select,
 .table-row textarea,
@@ -98,10 +94,6 @@ body {
     outline-offset: 0;
 }
 
-.table-row.expanded textarea {
-    height: 68px;
-}
-
 .table-row textarea::-webkit-scrollbar {
     display: none;
 }
@@ -124,7 +116,7 @@ body {
     background-color: var(--bg);
 }
 
-button {
+.panel-button {
     width: 24px;
     height: 24px;
     color: var(--text);
@@ -134,7 +126,7 @@ button {
     cursor: pointer;
 }
 
-button:hover {
+.panel-button:hover {
     background: var(--surface-hover);
 }
 
@@ -142,4 +134,70 @@ button:hover {
     position: absolute;
     border-radius: 50%;
     cursor: pointer;
+}
+
+.table-row .incomplete { outline: 1.5px dashed #e7e7e9; }
+
+.independent { background: #39E58C; }
+.hints       { background: #FF922E; }
+.solution    { background: #FF5C70; }
+
+.status-menu {
+    overflow: hidden;
+    position: absolute;
+    left: 50px;
+    width: 110px;
+    height: 113px;
+    display: flex;
+    flex-direction: column;
+    background: var(--bg);
+    border: 2px solid var(--border);
+    border-radius: 6px;
+    z-index: 2;
+}
+
+.status-menu .menu-button:hover {
+    background: var(--surface-hover);
+}
+
+.status-menu .menu-button {
+    padding-top: 6px;
+    padding-bottom: 6px;
+    text-align: left;
+    color: var(--text);
+    background: var(--bg);
+    border: none;
+    cursor: pointer;
+}
+
+.status-menu .checkbox {
+    position: absolute;
+    left: 5px;
+    top: 92px;
+    width: 14px;
+    height: 14px;
+    color: var(--text);
+    background: #39E58C;
+    border: 2px solid var(--border);
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.status-menu .checkbox.unchecked {
+    background: var(--bg);
+}
+
+.status-menu .checkbox.unchecked img {
+    visibility:hidden;
+}
+
+.status-menu .complete-text {
+    position: absolute;
+    left: 27px;
+    top: 94px;
+    font-size: small;
+}
+
+.status-menu[hidden] {
+    display: none;
 }
